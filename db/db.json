@@ -1,0 +1,35 @@
+{
+  "equipamento": [
+    {
+      "id": "ty",
+      "nome": "a title",
+      "carga": 10000
+    },
+    {
+      "id": "2",
+      "nome": "another title",
+      "carga": 20000
+    },
+    {
+      "id": "ed84",
+      "nome": "flexora",
+      "carga": "4"
+    },
+    {
+      "id": "2d92",
+      "nome": "f",
+      "carga": "5"
+    },
+    {
+      "id": "ea2a",
+      "nome": "supino",
+      "carga": "5",
+      "equipamento": "supino"
+    },
+    {
+      "id": "14b8",
+      "nome": "voadora",
+      "carga": "65"
+    }
+  ]
+}
