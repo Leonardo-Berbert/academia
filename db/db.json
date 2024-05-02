@@ -31,5 +31,50 @@
       "nome": "voadora",
       "carga": "65"
     }
+  ],
+  "aluno": [
+    {
+      "nome": "joao",
+      "id": "3bef"
+    },
+    {
+      "nome": "kleber",
+      "id": "6f7f"
+    },
+    {
+      "nome": "Pedro",
+      "id": "cac1"
+    }
+  ],
+  "instrutor": [
+    {
+      "id": "d410",
+      "nome": "luiz",
+      "cpf": "2343453456"
+    }
+  ],
+  "exercicio": [
+    {
+      "id": "a6fb",
+      "nome": "flexão",
+      "aparelho": "voador"
+    }
+  ],
+  "login": [
+    {
+      "id": "81c3",
+      "username": "adimin",
+      "password": "adimin"
+    },
+    {
+      "id": "b108",
+      "username": "ESS",
+      "password": "SWW"
+    },
+    {
+      "id": "7ea2",
+      "usuarios": "adimin",
+      "senhas": "adimin"
+    }
   ]
 }

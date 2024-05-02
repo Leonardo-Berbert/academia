@@ -14,6 +14,7 @@
     "json-server": "^1.0.0-alpha.23",
     "nuxt": "^3.10.3",
     "vue": "^3.4.21",
+    "vue-good-table": "^2.21.11",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
