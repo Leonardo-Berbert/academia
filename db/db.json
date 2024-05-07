@@ -1,24 +1,9 @@
 {
   "equipamento": [
     {
-      "id": "ty",
-      "nome": "a title",
-      "carga": 10000
-    },
-    {
-      "id": "2",
-      "nome": "another title",
-      "carga": 20000
-    },
-    {
       "id": "ed84",
       "nome": "flexora",
       "carga": "4"
-    },
-    {
-      "id": "2d92",
-      "nome": "f",
-      "carga": "5"
     },
     {
       "id": "ea2a",
@@ -34,16 +19,34 @@
   ],
   "aluno": [
     {
-      "nome": "joao",
-      "id": "3bef"
+      "nome": "fabio",
+      "idade": "65",
+      "id": "1e17"
     },
     {
-      "nome": "kleber",
-      "id": "6f7f"
-    },
-    {
+      "id": "da13",
       "nome": "Pedro",
-      "id": "cac1"
+      "idade": "223"
+    },
+    {
+      "id": "e6b9",
+      "nome": "matheus",
+      "idade": "12"
+    },
+    {
+      "id": "8278",
+      "nome": "Pedro",
+      "idade": "24"
+    },
+    {
+      "id": "e813",
+      "nome": "matheus",
+      "idade": "223"
+    },
+    {
+      "id": "b66b",
+      "nome": "renan",
+      "idade": "53"
     }
   ],
   "instrutor": [

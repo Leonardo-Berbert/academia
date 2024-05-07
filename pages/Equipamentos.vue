@@ -3,6 +3,7 @@ import data from '../db/db.json'
 import type { FormError, FormSubmitEvent } from '#ui/types'
 
 const equipamento = data.equipamento
+const apiUrl = "http://localhost:8000"
 
 
 const state = reactive({
@@ -31,6 +32,40 @@ async function onSubmit (event: FormSubmitEvent<any>) {
         state.nome = undefined
         state.carga = undefined
 }
+function editar(index: number, equipamento: any) {
+    if (equipamento.editavel) 
+    {
+      fetch(`${apiUrl}/equipamento/${equipamento.id}`, 
+      {
+        method: 'PUT',
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ nome: equipamento.nome })
+      }).then(() => 
+      {
+        console.log('Aluno editado');
+      }).catch(err => 
+      {
+        console.error(err)
+      });
+    } 
+    else 
+  {
+   
+    equipamento.editavel = true;
+  }
+}
+async function remove(id: number) 
+{
+  try {
+    const req = await fetch(`${apiUrl}/equipamento/${id}`, {
+      method: 'DELETE'
+    })
+    console.log('Aluno removido');
+ 
+  } catch (err) {
+    console.error(err)
+  }
+}
 </script>
 
 <template>
@@ -46,6 +81,13 @@ async function onSubmit (event: FormSubmitEvent<any>) {
         <UButton type="submit">
             cadastrar
         </UButton>
+        <div v-for="(equipamento, index) in equipamento" :key="index">
+          <p v-if="!equipamento.editavel">{{ equipamento.nome }}</p>
+          <UInput v-else v-model="equipamento.nome" />
+          <UButton @click="editar(index, equipamento)">Editar</UButton>
+          <UButton @click="remove(equipamento.id)">Remover</UButton>
+          <hr>
+        </div>
     </UForm>
 
     <UTable :rows="equipamento" />
