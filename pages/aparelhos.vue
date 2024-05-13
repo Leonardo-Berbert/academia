@@ -2,18 +2,18 @@
 import data from '../db/db.json'
 import type { FormError, FormSubmitEvent } from '#ui/types'
 
-const equipamento = data.equipamento
+const aparelhos = data.aparelhos
 const apiUrl = "http://localhost:8000"
 
 
 const state = reactive({
   nome: undefined,
-  carga: undefined
+  cargaM: undefined
 })
 
 const validate = (state: any): FormError[] => {
   const errors = []
-  if (!state.carga) errors.push({ path: 'carga', message: 'campo obrigatorio' })
+  if (!state.cargaM) errors.push({ path: 'cargaM', message: 'campo obrigatorio' })
   if (!state.nome) errors.push({ path: 'nome', message: 'campo obrigatorio' })
   return errors
 }
@@ -23,23 +23,23 @@ async function onSubmit (event: FormSubmitEvent<any>) {
   console.log(event.data)
   const dataJson = JSON.stringify(state)
 
-        const req = await fetch("http://localhost:8000/equipamento", {
+        const req = await fetch("http://localhost:8000/aparelhos", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: dataJson
         })
 
         state.nome = undefined
-        state.carga = undefined
+        state.cargaM = undefined
 }
-function editar(index: number, equipamento: any) {
-    if (equipamento.editavel) 
+function editar(index: number, aparelhos: any) {
+    if (aparelhos.editavel) 
     {
-      fetch(`${apiUrl}/equipamento/${equipamento.id}`, 
+      fetch(`${apiUrl}/aparelhos/${aparelhos.id}`, 
       {
         method: 'PUT',
         headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({ nome: equipamento.nome })
+        body: JSON.stringify({ nome: aparelhos.nome })
       }).then(() => 
       {
         console.log('Aluno editado');
@@ -51,13 +51,13 @@ function editar(index: number, equipamento: any) {
     else 
   {
    
-    equipamento.editavel = true;
+    aparelhos.editavel = true;
   }
 }
 async function remove(id: number) 
 {
   try {
-    const req = await fetch(`${apiUrl}/equipamento/${id}`, {
+    const req = await fetch(`${apiUrl}/aparelhos/${id}`, {
       method: 'DELETE'
     })
     console.log('Aluno removido');
@@ -70,26 +70,26 @@ async function remove(id: number)
 
 <template>
     <UForm :validate="validate" :state="state" class="space-y-4" @submit="onSubmit">
-        <UFormGroup label="equipamento" name="equipamento">
+        <UFormGroup label="Aparelhos" name="aparelhos">
             <UInput v-model="state.nome" />
         </UFormGroup>
 
-        <UFormGroup label="carga" name="carga">
-            <UInput v-model="state.carga" type="carga" />
+        <UFormGroup label="Carga Máxima" name="cargaM">
+            <UInput v-model="state.cargaM" type="cargaM" />
         </UFormGroup>
 
         <UButton type="submit">
             cadastrar
         </UButton>
-        <div v-for="(equipamento, index) in equipamento" :key="index">
-          <p v-if="!equipamento.editavel">{{ equipamento.nome }}</p>
-          <UInput v-else v-model="equipamento.nome" />
-          <UButton @click="editar(index, equipamento)">Editar</UButton>
-          <UButton @click="remove(equipamento.id)">Remover</UButton>
+        <div v-for="(aparelhos, index) in aparelhos" :key="index">
+          <p v-if="!aparelhos.editavel">{{ aparelhos.nome }}</p>
+          <UInput v-else v-model="aparelhos.nome" />
+          <UButton @click="editar(index, aparelhos)">Editar</UButton>
+          <UButton @click="remove(aparelhos.id)">Remover</UButton>
           <hr>
         </div>
     </UForm>
 
-    <UTable :rows="equipamento" />
+    <UTable :rows="aparelhos" />
 </template>
 

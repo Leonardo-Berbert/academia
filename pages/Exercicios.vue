@@ -8,12 +8,12 @@ const apiUrl = "http://localhost:8000"
 
 const state = reactive({
   nome: undefined,
-  aparelho: undefined
+  objetivo: undefined
 })
 
 const validate = (state: any): FormError[] => {
   const errors = []
-  if (!state.aparelho) errors.push({ path: 'aparelho', message: 'campo obrigatorio' })
+  if (!state.objetivo) errors.push({ path: 'objetivo', message: 'campo obrigatorio' })
   if (!state.nome) errors.push({ path: 'nome', message: 'campo obrigatorio' })
   return errors
 }
@@ -30,7 +30,7 @@ async function onSubmit (event: FormSubmitEvent<any>) {
         })
 
         state.nome = undefined
-        state.aparelho = undefined
+        state.objetivo = undefined
 }
 function editar(index: number, exercicio: any) {
     if (exercicio.editavel) 
@@ -74,8 +74,8 @@ async function remove(id: number)
             <UInput v-model="state.nome" />
         </UFormGroup>
 
-        <UFormGroup label="aparelho" name="aparelho">
-            <UInput v-model="state.aparelho" type="aparelho" />
+        <UFormGroup label="objetivo" name="objetivo">
+            <UInput v-model="state.objetivo" type="objetivo" />
         </UFormGroup>
 
         <UButton type="submit">
@@ -89,7 +89,7 @@ async function remove(id: number)
           <hr>
         </div>
     </UForm>
-
+    <a href="menu">voltar</a>
     <UTable :rows="exercicio" />
 </template>
 

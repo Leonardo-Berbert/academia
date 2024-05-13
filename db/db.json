@@ -1,83 +1,228 @@
 {
-  "equipamento": [
+  "aparelho": [
     {
-      "id": "ed84",
-      "nome": "flexora",
-      "carga": "4"
+      "id": "f21a",
+      "nome": "voador",
+      "cargaM": "100"
     },
     {
-      "id": "ea2a",
-      "nome": "supino",
-      "carga": "5",
-      "equipamento": "supino"
+      "id": "41d1",
+      "nome": "sdasd",
+      "cargaM": "100"
     },
     {
-      "id": "14b8",
-      "nome": "voadora",
-      "carga": "65"
+      "id": "f318",
+      "nome": "sdad",
+      "cargaM": "230"
     }
   ],
   "aluno": [
     {
-      "nome": "fabio",
-      "idade": "65",
-      "id": "1e17"
+      "nome": "lklhj",
+      "CPF": "112.233.445-56",
+      "datanasc": "87/87/8787",
+      "telefone": "(23) 23445-5667",
+      "email": "asfdhasdasd@gmail.com",
+      "id": "41c7"
     },
     {
-      "id": "da13",
-      "nome": "Pedro",
-      "idade": "223"
+      "id": "ecb1",
+      "nome": "fatima",
+      "CPF": "488.488.848-88",
+      "telefone": "(45) 55555-5555",
+      "datanasc": "44/44/4444",
+      "email": "ererwwweasaa@gmail.com"
     },
     {
-      "id": "e6b9",
+      "id": "bec0",
       "nome": "matheus",
-      "idade": "12"
-    },
-    {
-      "id": "8278",
-      "nome": "Pedro",
-      "idade": "24"
-    },
-    {
-      "id": "e813",
-      "nome": "matheus",
-      "idade": "223"
-    },
-    {
-      "id": "b66b",
-      "nome": "renan",
-      "idade": "53"
+      "CPF": "112.233.445-56",
+      "telefone": "(23) 23445-5667",
+      "datanasc": "56/55/5555",
+      "email": "ererwwweasaa@gmail.com"
     }
   ],
   "instrutor": [
     {
-      "id": "d410",
+      "id": "31ad",
+      "nome": "marcos",
+      "CPF": "112.233.445-56",
+      "telefone": "(23) 23445-5667",
+      "datanasc": "56/55/5555",
+      "email": "wewqeqwewqeqw@gmail.com"
+    },
+    {
+      "id": "90f0",
       "nome": "luiz",
-      "cpf": "2343453456"
+      "CPF": "112.233.445-56",
+      "telefone": "(23) 23445-5667",
+      "datanasc": "56/55/5555",
+      "email": "asfdhasdasd@gmail.com"
+    },
+    {
+      "id": "9ce9",
+      "nome": "felipe",
+      "CPF": "112.233.445-56",
+      "telefone": "(23) 23445-5667",
+      "datanasc": "56/55/5555",
+      "email": "asfdhasdasd@gmail.com"
     }
   ],
   "exercicio": [
     {
-      "id": "a6fb",
+      "id": "bb1f",
       "nome": "flexão",
-      "aparelho": "voador"
+      "objetivo": "emagrecer"
+    },
+    {
+      "id": "7486",
+      "nome": "correr",
+      "objetivo": "ganho muscular"
+    },
+    {
+      "id": "c701",
+      "nome": "esteira",
+      "objetivo": "aptidao fisica"
     }
   ],
   "login": [
     {
-      "id": "81c3",
-      "username": "adimin",
-      "password": "adimin"
-    },
-    {
-      "id": "b108",
-      "username": "ESS",
-      "password": "SWW"
-    },
-    {
-      "id": "7ea2",
+      "id": "3b8d",
       "usuarios": "adimin",
       "senhas": "adimin"
+    },
+    {
+      "id": "b8ff",
+      "usuarios": "fsd",
+      "senhas": "sdas"
+    },
+    {
+      "id": "8c0a",
+      "usuarios": "fsdrtr",
+      "senhas": "sdas"
+    },
+    {
+      "id": "1157",
+      "usuarios": "rt",
+      "senhas": "rtrt"
+    }
+  ],
+  "carga": [
+    {
+      "id": "5f49",
+      "carga": "5"
+    },
+    {
+      "id": "508d",
+      "carga": "10"
+    },
+    {
+      "id": "6e26",
+      "carga": "15"
+    },
+    {
+      "id": "68cc",
+      "carga": "20"
+    },
+    {
+      "id": "4632",
+      "carga": "25"
+    },
+    {
+      "id": "f8e6",
+      "carga": "30"
+    },
+    {
+      "id": "756f",
+      "carga": "35"
+    },
+    {
+      "id": "af5a",
+      "carga": "40"
+    },
+    {
+      "id": "354a",
+      "carga": "45"
+    },
+    {
+      "id": "c65a",
+      "carga": "50"
+    },
+    {
+      "id": "8e4e",
+      "carga": "55"
+    },
+    {
+      "id": "3b20",
+      "carga": "65"
+    },
+    {
+      "id": "28cf",
+      "carga": "70"
+    },
+    {
+      "id": "040b",
+      "carga": "75"
+    },
+    {
+      "id": "6893",
+      "carga": "80"
+    },
+    {
+      "id": "79dc",
+      "carga": "85"
+    },
+    {
+      "id": "aa0e",
+      "carga": "90"
+    },
+    {
+      "id": "db8a",
+      "carga": "95"
+    },
+    {
+      "id": "9c47",
+      "carga": "100"
+    },
+    {
+      "id": "f8e6",
+      "carga": "105"
+    },
+    {
+      "id": "f239",
+      "carga": "110"
+    },
+    {
+      "id": "6cac",
+      "carga": "115"
+    },
+    {
+      "id": "47ba",
+      "carga": "120"
+    },
+    {
+      "id": "a6a2",
+      "carga": "125"
+    },
+    {
+      "id": "2f21",
+      "carga": "130"
+    },
+    {
+      "id": "5ba7",
+      "carga": "135"
+    },
+    {
+      "id": "eacd",
+      "carga": "140"
+    },
+    {
+      "id": "0d3c",
+      "carga": "145"
+    },
+    {
+      "id": "f764",
+      "carga": "150"
     }
   ]
 }
