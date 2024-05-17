@@ -4,6 +4,7 @@ import type { FormError, FormSubmitEvent } from '#ui/types'
 
 const login = data.login
 
+const cadastroSucesso = ref(false)
 
 const state = reactive({
   usuarios: undefined,
@@ -30,6 +31,13 @@ async function onSubmit (event: FormSubmitEvent<any>) {
 
         state.usuarios = undefined
         state.senhas = undefined
+
+        cadastroSucesso.value = true
+
+        function ocultarMensagem() {
+  cadastroSucesso.value = false
+}
+
 }
 
 </script>
@@ -59,6 +67,11 @@ async function onSubmit (event: FormSubmitEvent<any>) {
                         <UButton type="submit" class="w-full  bg-stone-600 text-white tracking-wider font-light py-2 px-4 rounded hover:bg-stone-500 flex items-center justify-center">
                             Cadastrar
                         </UButton>
+                            <div v-if="cadastroSucesso" class="bg-green-500 text-white p-4 rounded mb-4">
+                                Cadastrado com sucesso!!!
+                            </div>
+
+                        <a href="/" class="text-sky-700 hover:text-sky-900 flex justify-center items-center ml-10 m-5 "@click="ocultarMensagem">Voltar ao Login</a>
                         
                     </UForm>
             </div>

@@ -1,8 +1,11 @@
 <template>
     <div>
         <div class="border-t-2 border-gray-800 bg-gray-900 text-white p-3 text-center">
-    <p class="text-lg">SEJA-BEM VINDO AO SISTEMA DE FICHA DE TREINO</p>
-  </div>
+      <p class="text-lg">SEJA-BEM VINDO AO SISTEMA DE FICHA DE TREINO</p>
+      <a href="/"class="ml-80">SAIR</a>
+    </div>
+   
+  
   <div class=" bg-gray-900 text-white p-0">
   <div class="w-full">
     </div>
